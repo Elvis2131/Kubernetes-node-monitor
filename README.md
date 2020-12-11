@@ -3,7 +3,7 @@
 ##To run
 * Install python3 in your environment
 * copy this repo over, adjust paths in sshalert.service
-* copy sshalert.service to /etc/systemd/system/ into whichever target directory you want (probably multi-user)
+* copy monitor.service to /etc/systemd/system/ into whichever target directory you want (probably multi-user)
 * systemctl daemon-reload
 * systemctl start sshalert
 * systemctl enable sshalert
