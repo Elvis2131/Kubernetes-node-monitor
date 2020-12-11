@@ -1,11 +1,11 @@
 [Unit]
-Description=Tutorialinux sshalert service - alerts when someone logs in or sudos
+Description=Monitor a K8s node
 
 [Install]
 WantedBy=multi-user.target
 
 [Service]
 Type=simple
-ExecStart=/home/sshalert/sshalert/venv/bin/python3 /home/sshalert/sshalert/sshalert.py
+ExecStart=/home/<username>/<project_folder>/venv/bin/python3 /home/<username>/<project_folder>/nodemonitor.py
 EnvironmentFile=/home/sshalert/sshalert/secrets.env
 Restart=always
