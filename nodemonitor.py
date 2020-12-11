@@ -1,11 +1,9 @@
-import requests
 from threading import Timer
-from slack import send_slack_message
-import json,os,datetime
+import json,os,datetime,requests
 
 def main():
     
-    results = requests.get('https://akaditi.com/')
+    results = requests.get('<Enter node address>')
 
     if results.status_code == 200:
         notification("Server is alive")
