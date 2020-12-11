@@ -3,17 +3,17 @@ import json,os,datetime,requests
 
 def main():
     
-    results = requests.get('<Enter node address>')
+    results = requests.get('<node address>')
 
     if results.status_code == 200:
-        notification("Server is alive")
+        print("Server is alive")
     else:
         notification("Server Down")
         logerror("Server went down at " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + "\n")
     
     Timer(5,main).start()
 
-def notification(args):
+def notification(arg):
     data = {
         "text": args
     }
